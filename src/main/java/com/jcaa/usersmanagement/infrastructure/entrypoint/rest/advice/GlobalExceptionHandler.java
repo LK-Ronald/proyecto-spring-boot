@@ -1,5 +1,6 @@
 package com.jcaa.usersmanagement.infrastructure.entrypoint.rest.advice;
 
+import com.jcaa.usersmanagement.domain.exception.CalificacionNotFoundException;
 import com.jcaa.usersmanagement.domain.exception.DomainException;
 import com.jcaa.usersmanagement.domain.exception.InvalidCredentialsException;
 import com.jcaa.usersmanagement.domain.exception.UserAlreadyExistsException;
@@ -18,9 +19,9 @@ import java.util.stream.Collectors;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-  @ExceptionHandler(UserNotFoundException.class)
+  @ExceptionHandler({UserNotFoundException.class, CalificacionNotFoundException.class})
   @ResponseStatus(HttpStatus.NOT_FOUND)
-  public ApiErrorResponse handleUserNotFound(final UserNotFoundException exception) {
+  public ApiErrorResponse handleNotFound(final DomainException exception) {
     return new ApiErrorResponse(HttpStatus.NOT_FOUND.value(), exception.getMessage());
   }
 
