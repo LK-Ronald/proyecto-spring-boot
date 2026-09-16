@@ -1,6 +1,6 @@
 # Users Management — Spring Boot, Arquitectura Hexagonal y DDD
 
-Aplicación de **gestión de usuarios** construida con **Java 24** y **Spring Boot 3.4.3**, aplicando **Arquitectura Hexagonal** y **DDD**.
+Aplicación de **gestión de usuarios** y **gestion de calificaciones** construida con **Java 24** y **Spring Boot 3.4.3**, aplicando **Arquitectura Hexagonal** y **DDD**.
 
 ## Ejecutar en terminal
 
