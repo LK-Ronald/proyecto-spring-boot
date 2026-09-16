@@ -1,14 +1,41 @@
 # Users Management — Spring Boot, Arquitectura Hexagonal y DDD
 
-Aplicación de gestión de usuarios construida con Java 24 y Spring Boot 3.4.3. La API REST es el punto de entrada activo. El código de la antigua CLI se conserva como adaptador inactivo y no posee un contenedor de dependencias independiente.
+Aplicación de **gestión de usuarios** construida con **Java 24** y **Spring Boot 3.4.3**, aplicando **Arquitectura Hexagonal** y **DDD**.
 
-Spring es el único *composition root*: `Main` inicia el contexto y las dependencias se resuelven mediante configuración y component scanning de Spring.
+## Ejecutar en terminal
 
-## Verificación
+### 1) Instalar dependencias y correr pruebas
 
 ```bash
 ./mvnw clean test
+```
+
+En Windows:
+
+```bat
+.\mvnw.cmd clean test
+```
+
+### 2) Construir el JAR
+
+```bash
 ./mvnw clean package
 ```
 
-En Windows se puede utilizar `mvnw.cmd`.
+El artefacto se genera en `target/users-management-2.1.0.jar`.
+
+### 3) Ejecutar la aplicación
+
+Opción A — con Maven:
+
+```bash
+./mvnw spring-boot:run
+```
+
+Opción B — ejecutando el JAR:
+
+```bash
+java -jar target/users-management-2.1.0.jar
+```
+
+Por defecto levanta en `http://localhost:8080`.
