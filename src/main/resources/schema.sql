@@ -31,3 +31,15 @@ VALUES (
     'ACTIVE'
 );
 
+CREATE TABLE tb_calificaciones (
+    cid INT AUTO_INCREMENT PRIMARY KEY,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    estudiante VARCHAR(100) NOT NULL,
+    docente VARCHAR(100) NOT NULL,
+    asignatura VARCHAR(60) NOT NULL,
+    carrera VARCHAR(60) NOT NULL,
+    universidad VARCHAR(100) NOT NULL,
+    periodo VARCHAR(20) NOT NULL,
+    actividadEvaluada VARCHAR(100) NOT NULL,
+    nota DECIMAL(4,2) NOT NULL
+);
