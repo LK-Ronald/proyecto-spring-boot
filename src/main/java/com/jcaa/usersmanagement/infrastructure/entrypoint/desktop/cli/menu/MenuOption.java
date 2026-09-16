@@ -14,6 +14,11 @@ public enum MenuOption {
   UPDATE_USER(4, "Update user"),
   DELETE_USER(5, "Delete user"),
   LOGIN(6, "Login"),
+  LIST_CALIFICACIONES(7, "List all calificaciones"),
+  FIND_CALIFICACION(8, "Find calificacion by ID"),
+  CREATE_CALIFICACION(9, "Create calificacion"),
+  UPDATE_CALIFICACION(10, "Update calificacion"),
+  DELETE_CALIFICACION(11, "Delete calificacion"),
   EXIT(0, "Exit");
 
   private final int number;
